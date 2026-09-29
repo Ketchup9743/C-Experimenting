@@ -1,0 +1,17 @@
+int[] databaseID = new int[5];
+databaseID[0] = 5456747;
+databaseID[1] = 4829933;
+databaseID[2] = 4721010;
+databaseID[3] = 4849393;
+databaseID[4] = 3848212;
+int[] portID = new int[3];
+portID[0] = 8800;
+portID[1] = 5000;
+portID[2] = 6500;
+string[] databaseName = new string[5];
+databaseName[0] = "Database 1";
+databaseName[1] = "Database 2";
+databaseName[2] = "Database 3";
+databaseName[3] = "Database 4";
+databaseName[4] = "Database 5";
+System.Console.WriteLine($"{databaseName[0]} ID:{databaseID[0]} is running on port: {portID[0]}");
