@@ -22,4 +22,4 @@ memoryAmount =+ 8;
 System.Console.WriteLine($"\t{storageAmount}GB STORAGE and {memoryAmount}GB RAM allocated to {databaseName[0]} RUNNING on PORT {portID[0]}");
 storageAmount =+ 16;
 memoryAmount =+ 8;
-System.Console.WriteLine($"\t{storageAmount}GB STORAGE and {memoryAmount}GB RAM allocated to {databaseName[1]} RUNNING on PORT {portID[1]}");nt[] databaseID = new int[5];
+System.Console.WriteLine($"\t{storageAmount}GB STORAGE and {memoryAmount}GB RAM allocated to {databaseName[1]} RUNNING on PORT {portID[1]}");
