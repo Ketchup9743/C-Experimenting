@@ -17,9 +17,19 @@ databaseName[4] = "DATABASE 5";
 System.Console.WriteLine("General Info:");
 int storageAmount = 0;
 int memoryAmount = 0;
-storageAmount =+ 16;
-memoryAmount =+ 8;
-System.Console.WriteLine($"\t{storageAmount}GB STORAGE and {memoryAmount}GB RAM allocated to {databaseName[0]} RUNNING on PORT {portID[0]}");
-storageAmount =+ 16;
-memoryAmount =+ 8;
-System.Console.WriteLine($"\t{storageAmount}GB STORAGE and {memoryAmount}GB RAM allocated to {databaseName[1]} RUNNING on PORT {portID[1]}");
+if (portID[0] == 8800)
+{
+    storageAmount += 64;
+    memoryAmount += 16;
+    System.Console.WriteLine($"\t\t[Port {portID[0]} is running]");
+    System.Console.WriteLine($"\t\t\t[STORAGE : {storageAmount}GB]");
+    System.Console.WriteLine($"\t\t\t[RAM : {memoryAmount}GB]");
+}
+if (portID[1] == 5000)
+{
+    System.Console.WriteLine($"\t\t[Port {portID[1]} is running]");
+}
+if (portID[2] == 6500)
+{
+    System.Console.WriteLine($"\t\t[Port {portID[2]} is running]");
+}
