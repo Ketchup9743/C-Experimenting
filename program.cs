@@ -39,7 +39,7 @@ if (portID[1] == 5000)
 }
 if (portID[2] == 6500)
 {
-    storageAmount += 80; // Storage now is equal to 128
+    storageAmount += 112; // Storage now is equal to 128
     memoryAmount += 40;  // Memory now is equal to 64
     System.Console.WriteLine($"\t[Port {portID[2]} is running]");
     System.Console.WriteLine($"\t\t\t[STORAGE : {storageAmount}GB]");
