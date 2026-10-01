@@ -60,15 +60,15 @@ string[] databaseType = new string[3];
 switch (databaseNum)
 {
       case 100:
-        System.Console.WriteLine($"\t\t\t\t[Database Type Used: {databaseType[0]}]");
+        System.Console.WriteLine($"\t\t\t\t- [Database Type Used: {databaseType[0]}]");
             break;
       
       case 200:
-        System.Console.WriteLine($"\t\t\t\t[Database Type Used: {databaseType[1]}]");
+        System.Console.WriteLine($"\t\t\t\t- [Database Type Used: {databaseType[1]}]");
             break;
 
       case 300:
-        System.Console.WriteLine($"\t\t\t\t[Database Type Used: {databaseType[1]}]");
+        System.Console.WriteLine($"\t\t\t\t- [Database Type Used: {databaseType[1]}]");
             break;
 }
 System.Console.WriteLine("=================================");     
