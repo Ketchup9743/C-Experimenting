@@ -14,13 +14,15 @@ databaseName[1] = "DATABASE 2";
 databaseName[2] = "DATABASE 3";
 databaseName[3] = "DATABASE 4";
 databaseName[4] = "DATABASE 5";
+System.Console.WriteLine("=================================");
 System.Console.WriteLine("General Information:");
 int storageAmount = 0;
 int memoryAmount = 0;
-System.Random classID = new System.Random();   // Random Port ID Generator
-int numID = classID.Next(1, 500000);
+
 if (portID[0] == 8800)
 {
+    System.Random classID = new System.Random();   // Random Port ID Generator
+    int numID = classID.Next(1, 500000);
     storageAmount += 64; // Storage now is equal to 64
     memoryAmount += 16; // Memory now is equal to 16
     System.Console.WriteLine($"\t[Port {portID[0]} is running]");
@@ -30,6 +32,8 @@ if (portID[0] == 8800)
 }
 if (portID[1] == 5000)
 {
+    System.Random classID = new System.Random();   // Random Port ID Generator
+    int numID = classID.Next(1, 500000);
     storageAmount -= 48; // Storage now is equal to 16
     memoryAmount += 8;  // Memory now is equal to 24
     System.Console.WriteLine($"\t[Port {portID[1]} is running]");
@@ -39,6 +43,8 @@ if (portID[1] == 5000)
 }
 if (portID[2] == 6500)
 {
+    System.Random classID = new System.Random();   // Random Port ID Generator
+    int numID = classID.Next(1, 500000);
     storageAmount += 112; // Storage now is equal to 128
     memoryAmount += 40;  // Memory now is equal to 64
     System.Console.WriteLine($"\t[Port {portID[2]} is running]");
@@ -46,3 +52,4 @@ if (portID[2] == 6500)
     System.Console.WriteLine($"\t\t\t[RAM : {memoryAmount}GB]");
     System.Console.WriteLine($"\t\t\t[PORT ID : {numID}]");
 }
+System.Console.WriteLine("=================================");
