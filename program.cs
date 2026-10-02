@@ -15,9 +15,9 @@ string[] databaseName = new string[5];   // Declaring Database Names
     databaseName[3] = "DATABASE 4";
     databaseName[4] = "DATABASE 5";
 string[] databaseType = new string[3];
-    databaseType[0] = "SQLite";
+    databaseType[0] = "Oracle";
     databaseType[1] = "MySQL";
-    databaseType[2] = "PostgreSQL";
+    databaseType[2] = "Microsoft SQL";
         System.Console.WriteLine("===========================================");
         System.Console.WriteLine("");
         System.Console.WriteLine("\t\t\tGeneral Information:");
