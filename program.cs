@@ -19,49 +19,35 @@ string[] databaseType = new string[3];
     databaseType[1] = "MySQL";
     databaseType[2] = "PostgreSQL";
         System.Console.WriteLine("===========================================");
-        System.Console.WriteLine("General Information:");
+        System.Console.WriteLine("");
+        System.Console.WriteLine("\t\t\tGeneral Information:");
+        System.Console.WriteLine("");
+        System.Console.WriteLine("===========================================");
 int storageAmount = 0;
 int memoryAmount = 0;
+for (var i = 0; i < 3; i++)
+{
+    switch(portID[i])    // Assigns RAM and Storage to each port
+    {
+        case 8800:
+            storageAmount = 128;
+            memoryAmount = 64;
+            break;
 
-if (portID[0] == 8800)
-{
-    System.Random classID = new System.Random();   // Random Port ID Generator
-    int numID = classID.Next(1, 5000);
-    storageAmount += 64; // Storage now is equal to 64
-    memoryAmount += 16; // Memory now is equal to 16
-        System.Console.WriteLine($"\t[{databaseName[0]} is running on PORT: {portID[0]}]");
-        System.Console.WriteLine($"\t\t\t[STORAGE : {storageAmount}GB]");
-        System.Console.WriteLine($"\t\t\t[RAM : {memoryAmount}GB]");
-        System.Console.WriteLine($"\t\t\t[PORT ID : {numID}]");
-        System.Console.WriteLine($"\t\t\t[DATABASE TYPE : {databaseType[0]}]");
-}
+        case 5000:
+            storageAmount = 32;
+            memoryAmount = 16;
+            break;
+
+        case 6500:
+            storageAmount = 96;
+            memoryAmount = 32;
+            break;
+    }
+    System.Console.WriteLine($"\t{databaseName[i]} is running on {portID[i]}");  // Prints all of the info to the Console
+    System.Console.WriteLine($"\t\tSTORAGE : {storageAmount}GB");
+    System.Console.WriteLine($"\t\tRAM : {memoryAmount}GB");
     System.Console.WriteLine("");
     System.Console.WriteLine("===========================================");
-if (portID[1] == 5000)
-{
-    System.Random classID = new System.Random();   // Random Port ID Generator
-    int numID = classID.Next(1, 5000);
-    storageAmount -= 48; // Storage now is equal to 16
-    memoryAmount += 8;  // Memory now is equal to 24
-        System.Console.WriteLine($"\t[{databaseName[1]} is running on PORT: {portID[1]}]");
-        System.Console.WriteLine($"\t\t\t[STORAGE : {storageAmount}GB]");
-        System.Console.WriteLine($"\t\t\t[RAM : {memoryAmount}GB]");
-        System.Console.WriteLine($"\t\t\t[PORT ID : {numID}]");
-        System.Console.WriteLine($"\t\t\t[DATABASE TYPE : {databaseType[1]}]");
-}
     System.Console.WriteLine("");
-    System.Console.WriteLine("===========================================");
-if (portID[2] == 6500)
-{
-    System.Random classID = new System.Random();   // Random Port ID Generator
-    int numID = classID.Next(1, 5000);
-    storageAmount += 112; // Storage now is equal to 128
-    memoryAmount += 40;  // Memory now is equal to 64
-        System.Console.WriteLine($"\t[{databaseName[2]} is running on PORT: {portID[2]}]");
-        System.Console.WriteLine($"\t\t\t[STORAGE : {storageAmount}GB]");
-        System.Console.WriteLine($"\t\t\t[RAM : {memoryAmount}GB]");
-        System.Console.WriteLine($"\t\t\t[PORT ID : {numID}]");
-        System.Console.WriteLine($"\t\t\t[DATABASE TYPE : {databaseType[2]}]");
 }
-    System.Console.WriteLine("");
-    System.Console.WriteLine("===========================================");
