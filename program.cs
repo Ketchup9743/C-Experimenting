@@ -1,29 +1,64 @@
-int[] databaseID = new int[3];  // Declaring Database ID's 
-    databaseID[0] = 5456747;
-    databaseID[1] = 4829933;
-    databaseID[2] = 4721010;
-int[] portID = new int[3];   // Declaring Port Values
-    portID[0] = 8800;
-    portID[1] = 5000;
-    portID[2] = 6500;
-string[] databaseName = new string[3];   // Declaring Database Names
-    databaseName[0] = "DATABASE 1";
-    databaseName[1] = "DATABASE 2";
-    databaseName[2] = "DATABASE 3";
-string[] databaseType = new string[3];  // Declaring Database Types
-    databaseType[0] = "Oracle";
-    databaseType[1] = "MySQL";
-    databaseType[2] = "Microsoft SQL";
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        dataBases.portList();
+        programInstructions.consoleLogs();
+        programInstructions.loopProgram();
+    }
+}
+
+public class dataBases // Public Class for Databases
+{
+    public static int[] databaseID = new int[4];  // Declaring Database ID's 
+    public static string[] databaseName = new string[4];   // Declaring Database Names
+    public static string[] databaseType = new string[4];  // Declaring Database Types
+    public static int[] portID = new int[4]; // Declaring Port ID's
+       
+    public dataBases()
+    {
+        databaseID[0] = 5456747;
+        databaseID[1] = 4829933;
+        databaseID[2] = 4721010;
+
+        databaseName[0] = "DATABASE 1";
+        databaseName[1] = "DATABASE 2";
+        databaseName[2] = "DATABASE 3";
+
+        databaseType[0] = "Oracle";
+        databaseType[1] = "MySQL";
+        databaseType[2] = "Microsoft SQL";
+    }
+
+    public static void portList()
+    {
+        portID[0] = 8800;
+        portID[1] = 5000;
+        portID[2] = 6500;
+    }
+}
+
+public class programInstructions
+{
+    public static int storageAmount = 0;
+    public static int memoryAmount = 0;
+    
+    public static void consoleLogs()
+    {
         System.Console.WriteLine("===========================================");
         System.Console.WriteLine("");
         System.Console.WriteLine("\t\t\tGeneral Information:");
         System.Console.WriteLine("");
         System.Console.WriteLine("===========================================");
-int storageAmount = 0;
-int memoryAmount = 0;
-for (var redo = 0; redo < 3; redo++)
+    }
+    
+    public static void loopProgram()
     {
-       switch(portID[redo])    // Assigns RAM and Storage to each port
+        for (var redo = 0; redo < 3; redo++)
+        {
+            switch(dataBases.portID[redo])    
             {
                 case 8800:
                     storageAmount = 128;
@@ -40,27 +75,35 @@ for (var redo = 0; redo < 3; redo++)
                     memoryAmount = 32;
                 break;
             }
-        switch(databaseType[redo])
+            
+            switch(dataBases.databaseType[redo])
             {
                 case "Oracle":
-                    databaseID[0] = 5844;
+                    dataBases.databaseID[redo] = 5844;
                 break;
 
                 case "MySQL":
-                    databaseID[1] = 4822;
+                    dataBases.databaseID[redo] = 4822;
                 break;
 
                 case "Microsoft SQL":
-                    databaseID[2] = 9382;
+                    dataBases.databaseID[redo] = 9382;
                 break;
             }
-    System.Console.WriteLine("");
-    System.Console.WriteLine($"\t{databaseName[redo]} is running on {portID[redo]}");  // Prints all of the info to the Console
-    System.Console.WriteLine($"\t\tSTORAGE : {storageAmount}GB");
-    System.Console.WriteLine($"\t\tRAM : {memoryAmount}GB");
-    System.Console.WriteLine($"\t\tDATABASE TYPE : {databaseType[redo]}");
-    System.Console.WriteLine($"\t\tDATABASE ID : {databaseID[redo]}");
-    System.Console.WriteLine("");
-    System.Console.WriteLine("===========================================");
-    System.Console.WriteLine("");
+            finalLogs(redo);
+        } 
     }
+    
+    public static void finalLogs(int redo)
+    {
+        System.Console.WriteLine("");
+        System.Console.WriteLine($"\t{dataBases.databaseName[redo]} is running on {dataBases.portID[redo]}");  
+        System.Console.WriteLine($"\t\tSTORAGE : {storageAmount}GB");
+        System.Console.WriteLine($"\t\tRAM : {memoryAmount}GB");
+        System.Console.WriteLine($"\t\tDATABASE TYPE : {dataBases.databaseType[redo]}");
+        System.Console.WriteLine($"\t\tDATABASE ID : {dataBases.databaseID[redo]}");
+        System.Console.WriteLine("");
+        System.Console.WriteLine("===========================================");
+        System.Console.WriteLine("");
+    }
+}
