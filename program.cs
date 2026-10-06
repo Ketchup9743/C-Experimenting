@@ -17,19 +17,22 @@ public class dataBases // Public Class for Databases
     public static string[] databaseType = new string[4];  // Declaring Database Types
     public static int[] portID = new int[4]; // Declaring Port ID's
        
-    public dataBases()
+    static dataBases()
     {
         databaseID[0] = 5456747;
         databaseID[1] = 4829933;
         databaseID[2] = 4721010;
+        databaseID[3] = 4843758;
 
         databaseName[0] = "DATABASE 1";
         databaseName[1] = "DATABASE 2";
         databaseName[2] = "DATABASE 3";
+        databaseName[3] = "DATABASE 4";
 
         databaseType[0] = "Oracle";
         databaseType[1] = "MySQL";
         databaseType[2] = "Microsoft SQL";
+        databaseType[3] = "Postgre SQL";
     }
 
     public static void portList()
@@ -37,6 +40,7 @@ public class dataBases // Public Class for Databases
         portID[0] = 8800;
         portID[1] = 5000;
         portID[2] = 6500;
+        portID[3] = 9100;
     }
 }
 
@@ -56,7 +60,7 @@ public class programInstructions
     
     public static void loopProgram()
     {
-        for (var redo = 0; redo < 3; redo++)
+        for (var redo = 0; redo < 4; redo++)
         {
             switch(dataBases.portID[redo])    
             {
@@ -74,6 +78,11 @@ public class programInstructions
                     storageAmount = 96;
                     memoryAmount = 32;
                 break;
+
+                case 9100:
+                    storageAmount = 64;
+                    memoryAmount = 24;
+                break;
             }
             
             switch(dataBases.databaseType[redo])
@@ -88,6 +97,10 @@ public class programInstructions
 
                 case "Microsoft SQL":
                     dataBases.databaseID[redo] = 9382;
+                break;
+                
+                case "Postgre SQL":
+                    dataBases.databaseID[redo] = 1363;
                 break;
             }
             finalLogs(redo);
