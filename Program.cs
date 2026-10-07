@@ -12,11 +12,12 @@ class Program
 
 public class dataBases // Public Class for Databases
 {
-    public static int[] databaseID = new int[4];  // Declaring Database ID's 
-    public static string[] databaseName = new string[4];   // Declaring Database Names
-    public static string[] databaseType = new string[4];  // Declaring Database Types
+    public static int[] databaseID = new int[4]; // Declaring Database ID's
+    public static string[] databaseName = new string[4]; // Declaring Database Names
+    public static string[] databaseType = new string[4]; // Declaring Database Types
     public static int[] portID = new int[4]; // Declaring Port ID's
-       
+
+    // Static constructor to initialize data
     static dataBases()
     {
         databaseID[0] = 5456747;
@@ -48,7 +49,7 @@ public class programInstructions
 {
     public static int storageAmount = 0;
     public static int memoryAmount = 0;
-    
+
     public static void consoleLogs()
     {
         System.Console.WriteLine("===========================================");
@@ -57,60 +58,55 @@ public class programInstructions
         System.Console.WriteLine("");
         System.Console.WriteLine("===========================================");
     }
-    
+
     public static void loopProgram()
     {
         for (var redo = 0; redo < 4; redo++)
         {
-            switch(dataBases.portID[redo])    
+            switch (dataBases.portID[redo])
             {
                 case 8800:
                     storageAmount = 128;
                     memoryAmount = 64;
-                break;
-
+                    break;
                 case 5000:
                     storageAmount = 32;
                     memoryAmount = 16;
-                break;
-
+                    break;
                 case 6500:
                     storageAmount = 96;
                     memoryAmount = 32;
-                break;
-
+                    break;
                 case 9100:
                     storageAmount = 64;
                     memoryAmount = 24;
-                break;
+                    break;
             }
-            
-            switch(dataBases.databaseType[redo])
+
+            switch (dataBases.databaseType[redo])
             {
                 case "Oracle":
                     dataBases.databaseID[redo] = 5844;
-                break;
-
+                    break;
                 case "MySQL":
                     dataBases.databaseID[redo] = 4822;
-                break;
-
+                    break;
                 case "Microsoft SQL":
                     dataBases.databaseID[redo] = 9382;
-                break;
-                
+                    break;
                 case "Postgre SQL":
                     dataBases.databaseID[redo] = 1363;
-                break;
+                    break;
             }
+
             finalLogs(redo);
-        } 
+        }
     }
-    
+
     public static void finalLogs(int redo)
     {
         System.Console.WriteLine("");
-        System.Console.WriteLine($"\t{dataBases.databaseName[redo]} is running on {dataBases.portID[redo]}");  
+        System.Console.WriteLine($"\t{dataBases.databaseName[redo]} is running on {dataBases.portID[redo]}");
         System.Console.WriteLine($"\t\tSTORAGE : {storageAmount}GB");
         System.Console.WriteLine($"\t\tRAM : {memoryAmount}GB");
         System.Console.WriteLine($"\t\tDATABASE TYPE : {dataBases.databaseType[redo]}");
