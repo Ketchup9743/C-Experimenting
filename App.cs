@@ -25,6 +25,7 @@ public class logicStatements
 {
     public static void greetingLogic()
     {
+    Console.ForegroundColor = ConsoleColor.Gray;
     Console.WriteLine("Welcome to the Console Chat App!");
     Console.WriteLine("");
         Console.ForegroundColor = ConsoleColor.Cyan;
@@ -46,32 +47,44 @@ public class logicStatements
     Console.ResetColor();
     Console.Write("  -  ");
     Console.ForegroundColor = ConsoleColor.Red;
-    Console.Write("Bad");
+    Console.WriteLine("Bad");
     Console.ResetColor();
     string userDay = Console.ReadLine();
     if (userDay == "Good")
     {
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("Thats good!");
+        Console.ResetColor;
     } 
     else if (userDay == "good")
     {
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("Thats good!");
+        Console.ResetColor;
     }
     else if (userDay == "Bad")
     {
+        Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Thats not good :(");
+        Console.ResetColor;
     }
     else if (userDay == "bad")
     {
+        Console.ForegroundColor = ConsoleColor.Red;
         System.Console.WriteLine("Thats not good :(");
+        Console.ResetColor;
     }
     else if (userDay == "Mid")
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("Aw :(");
+        Console.ResetColor;
     }
     else if (userDay == "mid")
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("Aw :(");
+        Console.ResetColor;
     }
     else
     {
