@@ -15,7 +15,7 @@ public class startStatements
 	public static void Print()
 	{
     	Console.WriteLine("");
-        Console.ForegroundColor == ConsoleColor.Cyan
+        Console.ForegroundColor == ConsoleColor.Cyan;
     	Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
         Console.ResetColor();
 	}
@@ -27,7 +27,7 @@ public class logicStatements
     {
     Console.WriteLine("Welcome to the Console Chat App!");
     Console.WriteLine("");
-        Console.ForegroundColor == ConsoleColor.Cyan
+        Console.ForegroundColor == ConsoleColor.Cyan;
     	Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
         Console.ResetColor();
     Console.WriteLine("What is your name?");
@@ -37,15 +37,15 @@ public class logicStatements
     Console.WriteLine("");
     Console.WriteLine($"How is your day?");
     Console.WriteLine("Answer with");
-    Console.ForegroundColor == ConsoleColor.Green
+    Console.ForegroundColor == ConsoleColor.Green;
     Console.Write("Good");
     Console.ResetColor();
     Console.Write("  -  ");
-    Console.ForegroundColor == ConsoleColor.Yellow
+    Console.ForegroundColor == ConsoleColor.Yellow;
     Console.Write("Mid");
     Console.ResetColor();
     Console.Write("  -  ");
-    Console.ForegroundColor == ConsoleColor.Red
+    Console.ForegroundColor == ConsoleColor.Red;
     Console.Write("Bad");
     Console.ResetColor();
     string userDay = Console.ReadLine();
