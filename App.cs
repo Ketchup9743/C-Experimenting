@@ -78,7 +78,7 @@ public class logicStatements
         Console.WriteLine("Please Re-Run the Application and provide a valid response!");
     }
     Console.WriteLine("");
-    Console.ForegroundColor == ConsoleColor.Cyan
+    Console.ForegroundColor == ConsoleColor.Cyan;
     Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
     Console.ResetColor();
     }
