@@ -17,7 +17,6 @@ public class dataBases // Public Class for Databases
     public static string[] databaseType = new string[4]; // Declaring Database Types
     public static int[] portID = new int[4]; // Declaring Port ID's
 
-    // Static constructor to initialize data
     static dataBases()
     {
         databaseID[0] = 5456747;
